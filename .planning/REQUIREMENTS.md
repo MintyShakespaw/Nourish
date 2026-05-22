@@ -108,8 +108,6 @@
 | WATER-01 | Phase 2 | Pending |
 | WATER-02 | Phase 2 | Pending |
 | WATER-03 | Phase 2 | Pending |
-| FOOD-05 | Phase 2 | Pending |
-| FOOD-06 | Phase 2 | Pending |
 | FOOD-02 | Phase 3 | Pending |
 | FOOD-03 | Phase 3 | Pending |
 | HIST-01 | Phase 3 | Pending |
@@ -120,12 +118,16 @@
 | FIT-01 | Phase 4 | Pending |
 | FIT-02 | Phase 4 | Pending |
 | FIT-03 | Phase 4 | Pending |
+| FOOD-05 | Phase 5 | Pending |
+| FOOD-06 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 29 total
 - Mapped to phases: 29
-- Unmapped: 0 ✓
+- Unmapped: 0
+
+Note: SYNC-02 is assigned to Phase 1 (idempotency key schema, outbox table structure laid in the database) and completed in Phase 5 (full offline flush, conflict resolution, and zero-duplicate guarantee validated end-to-end).
 
 ---
 *Requirements defined: 2026-05-22*
-*Last updated: 2026-05-22 after initial definition*
+*Last updated: 2026-05-22 — FOOD-05, FOOD-06 corrected from Phase 2 to Phase 5 (custom foods belong in polish phase, not core logging MVP)*
