@@ -14,15 +14,15 @@ Build the Node.js/Express API, PostgreSQL schema, and JWT auth system that all m
 ## Implementation Decisions
 
 ### Auth Token Storage (Mobile)
-- **D-01:** Store JWT tokens in Expo SecureStore (hardware-encrypted iOS Keychain / Android Keystore). Do NOT use AsyncStorage or MMKV for tokens.
-- **D-02:** Access token lifetime: 15 minutes. Refresh token lifetime: 30 days. Axios interceptor handles silent refresh before expiry.
+- **D-01 [informational]:** Store JWT tokens in Expo SecureStore (hardware-encrypted iOS Keychain / Android Keystore). Do NOT use AsyncStorage or MMKV for tokens. *(Mobile-side implementation — Phase 2. Backend returns tokens in response body only.)*
+- **D-02 [informational]:** Access token lifetime: 15 minutes. Refresh token lifetime: 30 days. Axios interceptor handles silent refresh before expiry. *(Token lifetimes wired into auth.service.ts constants; Axios interceptor is mobile-side — Phase 2.)*
 
 ### Password Reset Email
 - **D-03:** Use Resend as the email provider (simple API, generous free tier 100/day, React Email templates).
 - **D-04:** Password reset link expires in 1 hour. Single-use token stored in DB, invalidated on use.
 
 ### Hosting & Deployment
-- **D-05:** Phase 1 runs entirely local — Express + PostgreSQL on developer machine. No cloud deployment in this phase.
+- **D-05 [informational]:** Phase 1 runs entirely local — Express + PostgreSQL on developer machine. No cloud deployment in this phase. *(Deployment scope constraint — no plan tasks needed; absence of cloud tasks is the implementation.)*
 - **D-06:** PostgreSQL runs in Docker for dev (`docker-compose.yml` with postgres service). Managed DB (Railway / Neon) planned for later deployment phase. Include a `docker-compose.yml` in the repo root.
 
 ### Claude's Discretion

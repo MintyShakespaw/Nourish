@@ -609,7 +609,7 @@ A working `/register` endpoint backed by a real PostgreSQL insert proves: Node r
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
 1. **Express 4 vs Express 5**
    - What we know: Express 5.2.1 is the current npm `latest` tag; Express 4 is still widely documented

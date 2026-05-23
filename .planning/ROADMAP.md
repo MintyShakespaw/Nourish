@@ -33,7 +33,11 @@
 
 **Requirements:** AUTH-01, AUTH-02, AUTH-03, AUTH-04, SYNC-01, SYNC-02, SYNC-03
 **Depends on:** None
-**Plans:** TBD
+**Plans:** 4 plans
+- [ ] 01-01-PLAN.md — Walking Skeleton: backend scaffolding + Docker Postgres + register endpoint (AUTH-01)
+- [ ] 01-02-PLAN.md — Full data schema: profiles, foods (pg_trgm), logs, sync_outbox + 0001 migration (SYNC-01/02/03 foundation)
+- [ ] 01-03-PLAN.md — Login + refresh + logout + rate limiting + requireAuth middleware (AUTH-02, AUTH-04)
+- [ ] 01-04-PLAN.md — Password reset via Resend email + React Email template + single-use tokens (AUTH-03)
 
 ---
 
@@ -105,7 +109,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Backend Foundation + Auth | 0/0 | Not started | - |
+| 1. Backend Foundation + Auth | 0/4 | Planned | - |
 | 2. Core Food Logging | 0/0 | Not started | - |
 | 3. Barcode Scanning + History | 0/0 | Not started | - |
 | 4. AI Features + Workouts | 0/0 | Not started | - |
